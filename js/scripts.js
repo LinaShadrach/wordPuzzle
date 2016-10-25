@@ -1,8 +1,8 @@
-var vowels = ["a", "e", "i", "o", "u"];
+
 var vowelsToDash = function(userInput){
   var dashes = [];
   for (var i = 0; i < userInput.length; i++){
-    if (vowelCheck(userInput.charAt(i), vowels)) {
+    if (vowelCheck(userInput.charAt(i))) {
       dashes.push("-");
     }
     else {
@@ -13,9 +13,10 @@ var vowelsToDash = function(userInput){
 };
 
 
-var vowelCheck = function(letter, vowelArray){
+var vowelCheck = function(letter){
+  var vowels = ["a", "e", "i", "o", "u"];
   var check = false;
-  vowelArray.forEach(function(vowel) {
+  vowels.forEach(function(vowel) {
     if(vowel === letter) {
       check = true;
     }
